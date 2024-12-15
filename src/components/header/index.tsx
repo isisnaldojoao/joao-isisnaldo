@@ -9,6 +9,7 @@ export function Header() {
     return (
         <div>
             <header className="w-full shadow-xl bg-black text-white fixed z-50">
+                <title>João Isisnaldo</title>
                 <nav className="flex justify-between items-center p-5 text-2xl">
                     <h1 className="font-bold text-black select-none">.</h1>
                     {/* Menu Hamburger */}
