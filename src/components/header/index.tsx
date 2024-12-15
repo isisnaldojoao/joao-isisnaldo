@@ -10,6 +10,12 @@ export function Header() {
         <div>
             <header className="w-full shadow-xl bg-black text-white fixed z-50">
                 <title>João Isisnaldo</title>
+                <meta name="description" content="FullStack developer!" />
+                <meta name="keywords" content="Next.js, SEO, React, Programação" />
+                <meta name="author" content="Seu Nome" />
+                <meta property="og:title" content="FullStack developer!" />
+                <meta property="og:description" content="FullStack developer!" />
+                <link rel="icon" href="/favicon.ico" />
                 <nav className="flex justify-between items-center p-5 text-2xl">
                     <h1 className="font-bold text-black select-none">.</h1>
                     {/* Menu Hamburger */}
