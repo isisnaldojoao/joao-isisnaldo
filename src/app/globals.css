@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.animate-bounce{
+  animation-duration: 2000ms;
+  z-index: 2;
+}
+
+.fullstack-animation{
+  border-right: 4px solid;
+  width: 16ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(16), blink .5s step-end infinite alternate;
+}
+
+li{
+  list-style: none;
+}
+
+.container {
+  width: 100vw;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  animation: slide 40s linear infinite;
+}
+
+.logos ul {
+  display: flex;
+  align-items: center;
+}
+
+.logos img {
+  width: 150px;
+  filter: grayscale(90%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.logos img:hover {
+  filter: grayscale(0%);
+}
+
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+@keyframes typing{
+  from{
+    width: 0;
+  }
+}
+
+@keyframes blink{
+  50%{
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: none; /* Isso oculta o container em dispositivos móveis */
+  }
+}
