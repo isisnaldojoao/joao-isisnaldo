@@ -89,27 +89,27 @@ export default function Home() {
 
 
       {/* Section 3 */}
-      <section className="bg-green-500 flex items-center justify-center min-h-screen w-full px-4 " id="projects">
-        <div className="text-4xl lg:text-8xl text-left p-5">
-          <h1 className="mt-[80px] font-bold text-black">MY PROJECTS_:</h1>
-        </div>
-        <div className="flex flex-col mt-[80px] justify-center items-center">
-          {project.map((proj) => (
-            <div key={proj.id} className="flex flex-col w-full sm:w-80 lg: m-5">
-              <h1 className="font-bold  text-xl lg:text-2xl">{proj.title}</h1>
-              <img className='w-[500px] h-[150px] rounded-lg  transition-all cursor-pointer hover:scale-90 ' src={proj.image}/>
-              <p className="text-sm lg:text-base mt-2">{proj.description}</p>
-              <a
-                target="_blank"
-                href={proj.github}
-                className="w-[200px] bg-green-800 text-white p-2 rounded-lg mt-4 text-center"
-              >
-                Project GitHub
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
+      <section className="bg-green-500  flex flex-col lg:flex-row flex items-center justify-center min-h-screen w-full px-4 " id="projects">
+      <div className="text-4xl lg:text-8xl text-left p-5">
+        <h1 className="mt-20 font-bold text-black">MY PROJECTS_:</h1>
+      </div>
+      <div className="flex flex-col mt-20 justify-center items-center">
+        {project.map((proj) => (
+          <div key={proj.id} className="flex flex-col w-full sm:w-80 lg:w-1/2 xl:w-1/3 m-5">
+            <h1 className="font-bold text-2xl lg:text-3xl">{proj.title}</h1>
+            <img className='w-full h-48 rounded-lg transition-all cursor-pointer hover:scale-90' src={proj.image}/>
+            <p className="text-lg lg:text-xl mt-2">{proj.description}</p>
+            <a
+              target="_blank"
+              href={proj.github}
+              className="w-full bg-green-800 text-white p-2 rounded-lg mt-4 text-center"
+            >
+              Project GitHub
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Section 4 */}
       <section className="bg-black text-white flex flex-col items-center justify-center min-h-screen w-full px-4" id="contact">
